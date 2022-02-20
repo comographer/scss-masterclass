@@ -1,6 +1,9 @@
 .wrapper {
   /* making the direct father a Flexbox Container */
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
 .box {
@@ -10,5 +13,16 @@
   color: white;
 }
 
-/* in Flexbox, you don't talk to the children. */
-/* You need to create Flexbox Container and talk to that */
+/* 
+in Flexbox, you don't talk to the children;
+You need to create Flexbox Container and talk to that;
+*/
+
+/* 
+Flex container has Main Axis and Cross Axis;
+flex-direction by default is Row;
+Main Axis is the horizontal axis by default;
+Main Axis can be controlled with justify-content;
+Cross Axis in the vertical axis by default;
+Cross Axis can be controlled with align-items;
+*/
