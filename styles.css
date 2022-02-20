@@ -1,7 +1,10 @@
 .wrapper {
   /* making the direct father a Flexbox Container */
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  /* Main Axis */
+  justify-content: center;
+  /* Cross Axis */
   align-items: center;
   height: 100vh;
 }
@@ -25,4 +28,8 @@ Main Axis is the horizontal axis by default;
 Main Axis can be controlled with justify-content;
 Cross Axis in the vertical axis by default;
 Cross Axis can be controlled with align-items;
+*/
+
+/* 
+On flex-direction : column, Main Axis is vertical and Cross Axis is horizontal;
 */
