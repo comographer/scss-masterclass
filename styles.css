@@ -6,8 +6,6 @@
   /* Criss Axis */
   align-items: flex-start;
   height: 100vh;
-  flex-wrap: wrap;
-  align-content: space-between;
 }
 
 .child {
@@ -19,6 +17,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.child:nth-child(2) {
+  background-color: black;
+  flex-grow: 3;
+}
+
+.child:nth-child(3) {
+  flex-grow: 2;
 }
 
 /* 1.1 First Rule of Flexbox
@@ -58,4 +65,13 @@ You can combine flex-direction and flex-wrap with flex-wrap: wrap-reverse;
 
 When children are wrapped, there will be horizontal space between lines;
 This line can also be modified by property align-content;
+*/
+
+/* 1.6 flex-grow, flex-shrink
+flex-grow and flex-shrink are properties given to the children;
+Depending on the flex-shrink value, the child will shrink as much as the value compared to other children;
+By default, flex-shrink value is 1, but you might want some boxes to shrink more than others;
+flex-grow works the opposite way from flex-shrink;
+Default flex-grow value is 0, but if value is given, that child will take all free spaces;
+These are useful when making responsive design;
 */
