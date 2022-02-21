@@ -1,27 +1,40 @@
-.wrapper {
+.father {
   /* making the direct father a Flexbox Container */
   display: flex;
-  flex-direction: column;
   /* Main Axis */
-  justify-content: center;
-  /* Cross Axis */
-  align-items: center;
+  justify-content: space-between;
+  /* Criss Axis */
+  align-items: flex-start;
   height: 100vh;
 }
 
-.box {
+.child {
   width: 200px;
   height: 200px;
   background-color: peru;
   color: white;
+  font-size: 50px;
 }
 
-/* 
+.child:nth-child(1) {
+  order: 2;
+  align-self: center;
+}
+
+.child:nth-child(2) {
+  order: 3;
+}
+
+.child:nth-child(3) {
+  order: 1;
+}
+
+/* 1.1
 in Flexbox, you don't talk to the children;
 You need to create Flexbox Container and talk to that;
 */
 
-/* 
+/* 1.2
 Flex container has Main Axis and Cross Axis;
 flex-direction by default is Row;
 Main Axis is the horizontal axis by default;
@@ -30,6 +43,17 @@ Cross Axis in the vertical axis by default;
 Cross Axis can be controlled with align-items;
 */
 
-/* 
+/* 1.3
 On flex-direction : column, Main Axis is vertical and Cross Axis is horizontal;
+*/
+
+/* 1.4
+One of the properties that can be applied to children is
+align-self;
+It is rarely used but can be used to align certain item;
+Another property that can be applied to children is 
+order;
+This is used when you cannot change the html;
+By default, boxes have order of 0;
+
 */
