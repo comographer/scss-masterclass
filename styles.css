@@ -6,6 +6,8 @@
   /* Criss Axis */
   align-items: flex-start;
   height: 100vh;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .child {
@@ -14,27 +16,17 @@
   background-color: peru;
   color: white;
   font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.child:nth-child(1) {
-  order: 2;
-  align-self: center;
-}
-
-.child:nth-child(2) {
-  order: 3;
-}
-
-.child:nth-child(3) {
-  order: 1;
-}
-
-/* 1.1
+/* 1.1 First Rule of Flexbox
 in Flexbox, you don't talk to the children;
 You need to create Flexbox Container and talk to that;
 */
 
-/* 1.2
+/* 1.2 Main Axis and Cross Axis
 Flex container has Main Axis and Cross Axis;
 flex-direction by default is Row;
 Main Axis is the horizontal axis by default;
@@ -43,11 +35,11 @@ Cross Axis in the vertical axis by default;
 Cross Axis can be controlled with align-items;
 */
 
-/* 1.3
+/* 1.3 Column and Row
 On flex-direction : column, Main Axis is vertical and Cross Axis is horizontal;
 */
 
-/* 1.4
+/* 1.4 align-self and order
 One of the properties that can be applied to children is
 align-self;
 It is rarely used but can be used to align certain item;
@@ -55,5 +47,15 @@ Another property that can be applied to children is
 order;
 This is used when you cannot change the html;
 By default, boxes have order of 0;
+*/
 
+/* 1.5 wrap, nowrap, reverse, align-content
+Flex by default tries to keep boxes in one line even if children width need modification;
+value of property flex-wrap is by default: nowrap;
+If that is changed to wrap, children will maintain given widths;
+
+You can combine flex-direction and flex-wrap with flex-wrap: wrap-reverse;
+
+When children are wrapped, there will be horizontal space between lines;
+This line can also be modified by property align-content;
 */
