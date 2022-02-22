@@ -3,10 +3,35 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.father {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 100px 100px;
+  gap: 10px;
+}
+
+.child {
+  background: peru;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 2.1 Life Before Grid
 Prior to introduction of Grid, it was very hard to make columns and rows with just flexbox;
 You would need to consider many things considering below;
 wrap, direction, etc.;
 Even with all that, it was still tough to form grid;
 Thus Grid was introduced;
+*/
+
+/* 2.2 CSS Grid Basic Concepts 
+Just like Flexbox, Grid happens on the father element;
+most things will happen on the father;
+with property grid-template-columns, we can make number of columns by assigning width;
+grid-template-rows will set height of rows of the grid;
+You can set gap between columns and rows with column-row and row-gap;
+If you want universal gap, use property gap;
 */
