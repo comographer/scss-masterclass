@@ -12,25 +12,20 @@ body {
 
 .header {
   background-color: #2ecc71;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: span 4;
 }
 .content {
   background-color: #3498db;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-column: 1 / -2;
+  grid-row: span 2;
 }
 .nav {
   background-color: #8e44ad;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row: span 2;
 }
 .footer {
   background-color: #f39c12;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: span 4;
 }
 
 /* 2.1 Life Before Grid
@@ -64,4 +59,13 @@ By assigning to the children grid-column-start & grid-column-end,
 you can determine from which line to which line the element will extend;
 Same goes for grid-row-start & grid-row-end;
 What you need to keep in mind is that these properties use "line" instead of column & row number;
+*/
+
+/* 2.5 Shortcuts
+You can use shortcut grid-column: start number / end number
+instead of using grid-column-start & grid-column-end;
+Of course same goes for grid-row;
+If end number === end line, you can use -1 instead of actual end line;
+Instead of start / end, you can replace with span followed by number of cells;
+You can also combine start / end with span;
 */
