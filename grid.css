@@ -5,27 +5,29 @@ body {
 
 .grid {
   display: grid;
-  gap: 10px;
-  grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line];
-  grid-template-rows: repeat(4, 100px [sexy-line]);
+  gap: 5px;
+  height: 50vh;
+  grid-template:
+    "header header header header" 1fr
+    "content content content nav" 2fr
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
 }
 
 .header {
   background-color: #2ecc71;
-  grid-column: span 4;
+  grid-area: header;
 }
 .content {
   background-color: #3498db;
-  grid-column: first-line / fourth-line;
-  grid-row: sexy-line 1 / sexy-line 3;
+  grid-area: content;
 }
 .nav {
   background-color: #8e44ad;
-  grid-row: span 2;
+  grid-area: nav;
 }
 .footer {
   background-color: #f39c12;
-  grid-column: span 4;
+  grid-area: footer;
 }
 
 /* 2.1 Life Before Grid
@@ -74,4 +76,14 @@ You can also combine start / end with span;
 In grid-template-columns & grid-template-rows, you can assign line names;
 When given line names, you can replace numbers in grid-column & grid-row with line names;
 If you want to name lines inside of repeat(), you input line-name inside of repeat();
+*/
+
+/* 2.7 Grid Template
+fr or fraction takes space available;
+If you do grid-template-columns: repeat(4, 1fr), each column will take each available space;
+This is more useful for fluid layout;
+grid-template property is basically everything in one box;
+grid-template combines grid-template-columns, grid-template-rows and grid-template-areas;
+first you write each row area and row height;
+follow that with a / and write width of each column;
 */

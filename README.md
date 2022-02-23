@@ -29,7 +29,7 @@
 - [x] grid-row-end
 - [x] grid-column
 - [x] grid-row
-- [ ] grid-template
+- [x] grid-template
 - [ ] justify-items
 - [ ] align-items
 - [ ] justify-content
@@ -37,18 +37,13 @@
 - [ ] grid-auto-columns
 - [ ] grid-auto-rows
 - [ ] grid-auto-flow
-- [ ] grid-column-start
-- [ ] grid-column-end
-- [ ] grid-row-start
-- [ ] grid-row-end
-- [ ] grid-column
-- [ ] grid-row
 - [ ] justify-self
 - [ ] align-self
 
 ### Keywords & Functions:
 
-- [ ] repeat
+- [x] repeat
+- [x] fr
 - [ ] min-content
 - [ ] max-content
 - [ ] minmax
