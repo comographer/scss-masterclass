@@ -7,27 +7,22 @@ body {
   display: grid;
   gap: 5px;
   height: 50vh;
-  grid-template:
-    "header header header header" 1fr
-    "content content content nav" 2fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: stretch center;
 }
 
 .header {
   background-color: #2ecc71;
-  grid-area: header;
 }
 .content {
   background-color: #3498db;
-  grid-area: content;
 }
 .nav {
   background-color: #8e44ad;
-  grid-area: nav;
 }
 .footer {
   background-color: #f39c12;
-  grid-area: footer;
 }
 
 /* 2.1 Life Before Grid
@@ -86,4 +81,14 @@ grid-template property is basically everything in one box;
 grid-template combines grid-template-columns, grid-template-rows and grid-template-areas;
 first you write each row area and row height;
 follow that with a / and write width of each column;
+You can also combine line naming in the start and end but usually wouldn't need that;
+However, repeat() does not work on grid-template
+*/
+
+/* 2.8 Place Items
+Grid father can use justify-items and align-items;
+By default, the values are stretch;
+You can use different values to place items differently within grid cells;
+stretch will not work when the children have height and/or width;
+Shortcut for combining these two is place-items;
 */
