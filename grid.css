@@ -7,16 +7,9 @@ body {
   color: white;
   display: grid;
   gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
   grid-auto-rows: 100px;
   margin-bottom: 30px;
-}
-
-.grid:nth-child(1) {
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-}
-
-.grid:nth-child(2) {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .item:nth-child(odd) {
@@ -26,14 +19,6 @@ body {
 .item:nth-child(even) {
   background-color: #3498db;
 }
-
-/* 2.12 auto-fit auto-fill
-auto-fit & auto-fill are used for responsive design and are only used within repeat();
-Inside repeat(), instead of number of columns, when you put auto-fill,
-it fills the rows with as much empty columns it can;
-auto-fit stretchs the elements to fit all the spaces;
-auto-fit is more fluid sizes and auto-fit is for more exact sizes;
-*/
 
 /* 2.1 Life Before Grid
 Prior to introduction of Grid, it was very hard to make columns and rows with just flexbox;
@@ -128,4 +113,19 @@ In most cases, you will stick to rows;
 minmax sets how big or small an element can be;
 While setting grid-template, instead of directing applying height or width,
 you can use minmax(min value, max value);
+*/
+
+/* 2.12 auto-fit auto-fill
+auto-fit & auto-fill are used for responsive design and are only used within repeat();
+Inside repeat(), instead of number of columns, when you put auto-fill,
+it fills the rows with as much empty columns it can;
+auto-fit stretchs the elements to fit all the spaces;
+auto-fit is more fluid sizes and auto-fit is for more exact sizes;
+*/
+
+/* 2.13 min-content max-content 
+min-content makes the cell as tiny as the content is;
+max-contetn makes the cell as big as it needs;
+We are not determining the sizes but the content is deciding;
+By putting together, repeat, minmax, min-content & max-content, you can make responsive design;
 */
