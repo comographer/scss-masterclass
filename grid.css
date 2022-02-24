@@ -4,12 +4,15 @@ body {
 }
 
 .grid {
+  background: gray;
+  color: white;
   display: grid;
   gap: 5px;
-  height: 50vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  place-items: stretch center;
+  height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  justify-content: space-evenly;
+  place-content: end center;
 }
 
 .header {
@@ -91,4 +94,10 @@ By default, the values are stretch;
 You can use different values to place items differently within grid cells;
 stretch will not work when the children have height and/or width;
 Shortcut for combining these two is place-items;
+*/
+
+/* 2.9 Place Content
+Unlike justify-items & align-items, justify-content & align-content moves the grid itself;
+justify-content aligns columns and align-content aligns rows;
+Of course there is place-content which takes both align-content and justify-content;
 */
