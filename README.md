@@ -32,13 +32,15 @@
 - [x] grid-template
 - [x] justify-items
 - [x] align-items
-- [ ] justify-content
-- [ ] align-content
-- [ ] grid-auto-columns
-- [ ] grid-auto-rows
-- [ ] grid-auto-flow
-- [ ] justify-self
-- [ ] align-self
+- [x] justify-content
+- [x] align-content
+- [x] place-content
+- [x] justify-self
+- [x] align-self
+- [x] place-self
+- [x] grid-auto-columns
+- [x] grid-auto-rows
+- [x] grid-auto-flow
 
 ### Keywords & Functions:
 

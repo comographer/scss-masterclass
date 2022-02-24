@@ -4,28 +4,21 @@ body {
 }
 
 .grid {
-  background: gray;
   color: white;
   display: grid;
   gap: 5px;
-  height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-  justify-content: space-evenly;
-  place-content: end center;
+  grid-auto-columns: 100px;
+  grid-auto-flow: column;
 }
 
-.header {
+.item:nth-child(odd) {
   background-color: #2ecc71;
 }
-.content {
+
+.item:nth-child(even) {
   background-color: #3498db;
-}
-.nav {
-  background-color: #8e44ad;
-}
-.footer {
-  background-color: #f39c12;
 }
 
 /* 2.1 Life Before Grid
@@ -100,4 +93,19 @@ Shortcut for combining these two is place-items;
 Unlike justify-items & align-items, justify-content & align-content moves the grid itself;
 justify-content aligns columns and align-content aligns rows;
 Of course there is place-content which takes both align-content and justify-content;
+*/
+
+/* 2.10 Auto Columns and Rows
+Similar to Flexbox, you can align each element;
+You can apply property align-self, justify-self & place-self to align an element within the cell;
+
+When you have more elements than the created grid cells, ie, when you don't know how many elements there will be,
+You can set default cell size values to grid-auto-columns & grid-auto-rows;
+grid-auto-rows will only be activated when there are more rows than initially planned in grid-template-rows;
+You can even omit grid-template-rows and just use grid-auto-rows if all row sizes will be same;
+
+If you want new elements to grow more columns, you can use grid-auto-flow: column; to change the direction;
+It works similar to flex-direction: column;
+In this case, you will need to set default column size with grid-auto-columns;
+In most cases, you will stick to rows;
 */
