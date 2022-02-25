@@ -1,15 +1,13 @@
-@import "_variables";
-@import "_mixins";
+@import "_buttons";
 
 a {
-  margin-bottom: 10px;
-  &:nth-child(odd) {
-    @include link("odd");
-  }
+  @extend %button;
+  text-decoration: none;
+}
 
-  &:nth-child(even) {
-    @include link("even");
-  }
+button {
+  @extend %button;
+  border: none;
 }
 
 /* 3.1 Variables and Nesting
@@ -33,4 +31,12 @@ inside of the curly brackets, you right your SCSS;
 After importing _mixins to your main SCSS file, you can use the mixin as so: @include mixinName();
 As usage form of mixins looks like a function, they can actually take variables;
 You can also use @if & @else inside a mixin;
+*/
+
+/* 3.3 Extends
+You use Mixins when you want to repeat with some conditions using arguments;
+You use Extends when you want to extend and re-use other code;
+Just like Variables and Mixins, you create a file starting with an underscore;
+To create a Extend: %extendName {};
+To use: @extend %extendName;
 */

@@ -56,10 +56,9 @@
 
 - [x] Variables
 - [x] Nesting
-- [ ] Partials
-- [ ] Mixins
-- [ ] Extend
-- [ ] Responsive
+- [x] Mixins
+- [x] Extend
+- [x] Responsive Mixins
 
 <!-- 3.0 CSS Preprocessors and Set Up
 SCSS is a CSS Preprocessors;
