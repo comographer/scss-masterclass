@@ -61,6 +61,19 @@
 - [ ] Extend
 - [ ] Responsive
 
+<!-- 3.0 CSS Preprocessors and Set Up
+SCSS is a CSS Preprocessors;
+CSS Preprocessors is type of program that helps you right sexy CSS and turns it into normal CSS;
+There are other CSS Preprocessors like Sass and Less;
+It's basically like addons in World of Warcraft;
+Just like addons, everyone uses these to wrtie CSS easily;
+
+In order to use SCSS, you need an additional step to compile or build;
+Gulp is a nodeJS package that helps you compile files;
+In this case, turning SCSS into regular CSS;
+
+-->
+
 ## To Clone:
 
 - [ ] [https://besthorrorscenes.com/](https://besthorrorscenes.com/)
