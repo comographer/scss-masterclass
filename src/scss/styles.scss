@@ -1,6 +1,33 @@
-body {
-  background: peru;
-  a {
+@import "_variables";
+
+h2 {
+  color: $bg;
+}
+
+.box {
+  margin-top: 20px;
+  h2 {
     color: blue;
+    &:hover {
+      color: aqua;
+    }
+  }
+  &:hover {
+    background-color: green;
+  }
+  button {
+    color: red;
   }
 }
+
+// 3.1 Variables and Nesting
+// In order to create variables files in SCSS, you should create a file with underscore in front of the file name;
+// Underscore means that file will not be compiled;
+// In the variables file, you can make a varialble as below;
+// $variableName: variableValue;
+// To import _variables file: @import "_variables";
+// Once imported, you can use those variables with $variableName;
+// Nesting helps you target your elements more precisely;
+// If you have many same elements without classname,
+// you can target certain element in certain element by nesting them like properties;
+// You can also nest status such as hover: $:hover {};
