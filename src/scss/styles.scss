@@ -1,13 +1,16 @@
-@import "_buttons";
+@import "_mixins";
 
-a {
-  @extend %button;
-  text-decoration: none;
-}
-
-button {
-  @extend %button;
-  border: none;
+h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 60px;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
 }
 
 /* 3.1 Variables and Nesting
@@ -39,4 +42,9 @@ You use Extends when you want to extend and re-use other code;
 Just like Variables and Mixins, you create a file starting with an underscore;
 To create a Extend: %extendName {};
 To use: @extend %extendName;
+*/
+
+/* 3.4 Awesome Mixins and Conclusions
+In Mixins, there is an important keyword: @content;
+Just with @content, you can make reponsvie CSS;
 */
