@@ -70,8 +70,40 @@ Just like addons, everyone uses these to wrtie CSS easily;
 In order to use SCSS, you need an additional step to compile or build;
 Gulp is a nodeJS package that helps you compile files;
 In this case, turning SCSS into regular CSS;
-
 -->
+
+<!-- 3.1 Variables and Nesting
+In order to create variables files in SCSS, you should create a file with underscore in front of the file name;
+Underscore means that file will not be compiled;
+In the _variables file, you can make a varialble as below;
+$variableName: variableValue;
+To import _variables file: @import "_variables";
+Once imported, you can use those variables with $variableName;
+Nesting helps you target your elements more precisely;
+If you have many same elements without classname,
+you can target certain element in certain element by nesting them like properties;
+You can also nest status such as hover: $:hover {};
+-->
+
+<!-- 3.2 Mixins
+Mixins allows you to use SCSS functionality;
+Just like _variables you create a file _mixins.scss;
+To create a mixin: @mixin mixinName() {};
+inside of the curly brackets, you right your SCSS;
+After importing _mixins to your main SCSS file, you can use the mixin as so: @include mixinName();
+As usage form of mixins looks like a function, they can actually take variables;
+You can also use @if & @else inside a mixin; -->
+
+<!-- 3.3 Extends
+You use Mixins when you want to repeat with some conditions using arguments;
+You use Extends when you want to extend and re-use other code;
+Just like Variables and Mixins, you create a file starting with an underscore;
+To create a Extend: %extendName {};
+To use: @extend %extendName; -->
+
+<!-- 3.4 Awesome Mixins and Conclusions
+In Mixins, there is an important keyword: @content;
+Just with @content, you can make reponsvie CSS; -->
 
 ## To Clone:
 
