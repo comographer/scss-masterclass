@@ -117,6 +117,9 @@ main {
     .second {
       background-color: $beige;
     }
+    .third {
+      background-color: #dee8e9;
+    }
     & * {
       width: 50%;
     }
@@ -159,6 +162,36 @@ main {
           width: 70%;
         }
       }
+    }
+    .nails {
+      display: flex;
+      width: 40%;
+      margin-bottom: 70px;
+      .nail {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 70%;
+          margin-bottom: 40px;
+        }
+        span {
+          @extend %miniTitle;
+        }
+        &:nth-child(2) {
+          border-left: 1px solid;
+          border-right: 1px solid;
+        }
+        &:nth-child(3) {
+          border-right: 1px solid;
+        }
+      }
+    }
+    button {
+      @extend %button;
+      width: 240px;
     }
   }
 }
