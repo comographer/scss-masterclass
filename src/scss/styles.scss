@@ -1,233 +1,76 @@
 @import "reset";
 @import "_variables";
-@import "_extends";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Caladea:400&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Caladea";
-  padding-top: 75px;
-}
-
-header {
-  height: 75px;
-  width: 100%;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 45px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ul {
-      width: 33%;
-      display: flex;
-      @extend %miniTitle;
-      &:first-child {
-        li {
-          margin-right: 60px;
-        }
-      }
-      &:last-child {
-        display: flex;
-        justify-content: flex-end;
-        li:last-child {
-          margin-left: 60px;
-        }
-      }
-    }
-    div {
-      width: 40px;
-      height: 40px;
-      border: 7px dotted black;
-    }
-  }
-}
-
-footer {
-  height: 265px;
-  background-color: $beige;
-  padding: 65px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  background-color: $bg;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  .footer__column {
+  grid-template-columns: 1.5fr 1.9fr 1.5fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  gap: 1px;
+  & > *:not(script) {
+    background-color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-transform: uppercase;
-    @extend %miniTitle;
-    ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      li {
-        opacity: 0.7;
-        margin-bottom: 15px;
-      }
-    }
-    span {
-      opacity: 0.3;
-      margin-bottom: 50px;
-    }
-    &:nth-child(2) {
-      border-right: 1px solid black;
-      border-left: 1px solid black;
-    }
-  }
-}
-
-main {
-  padding: 100px 50px 265px 50px;
-  width: 100%;
-  .banner {
-    width: 100%;
-    display: flex;
-    .right {
-      background-color: #fbf7f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      span {
-        @extend %miniTitle;
-        margin-bottom: 30px;
-      }
-      h3 {
-        font-size: 2.5vw;
-        opacity: 0.6;
-        width: 80%;
-        line-height: 1.3;
-        margin-bottom: 60px;
-      }
-      button {
-        @extend %button;
-      }
-    }
-    .second {
-      background-color: $beige;
-    }
-    .third {
-      background-color: #dee8e9;
-    }
-    & * {
-      width: 50%;
-    }
-  }
-  .colors {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    h6 {
-      @extend %miniTitle;
-    }
-    h2 {
-      font-size: 32px;
-      margin: 20px 0;
-    }
-    .container {
+    color: $bg;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  .menu {
+    grid-column-start: -2;
+  }
+  .center-image {
+    grid-column: 2 / -2;
+    grid-row: 2 / -2;
+    background-image: url("https://images.unsplash.com/photo-1583309219338-a582f1f9ca6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  .number__row {
+    background-color: $bg;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    height: 100%;
+    align-items: stretch;
+    .number {
       display: flex;
-      img {
-        width: 100%;
-        margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      cursor: pointer;
+      transition: color 0.3s linear, background-color 0.3s linear;
+      &:hover {
+        background-color: $bg;
+        color: white;
       }
-      .color {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        h3 {
-          margin-top: 20px;
-          margin-bottom: 30px;
-          font-style: italic;
-          font-size: 32px;
-        }
-        span {
-          @extend %miniTitle;
-          margin-bottom: 40px;
-        }
-        button {
-          @extend %button;
-          width: 70%;
-        }
-      }
-    }
-    .nails {
-      display: flex;
-      width: 40%;
-      margin-bottom: 70px;
-      .nail {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 70%;
-          margin-bottom: 40px;
-        }
-        span {
-          @extend %miniTitle;
-        }
-        &:nth-child(2) {
-          border-left: 1px solid;
-          border-right: 1px solid;
-        }
-        &:nth-child(3) {
-          border-right: 1px solid;
-        }
-      }
-    }
-    button {
-      @extend %button;
-      width: 240px;
     }
   }
-  .grid-one {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    .card {
-      background: $beige;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      h2 {
-        opacity: 0.5;
-        font-size: 2em;
-        margin: 40px 0;
-      }
-      span {
-        @extend %miniTitle;
-        cursor: pointer;
-        transform: scale(1);
-        transition: 0.3s ease-in-out;
-        &:hover {
-          transform: scale(1.2);
-          transition: 0.3s ease-in-out;
-        }
-      }
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  .scrolling__text {
+    grid-column-start: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    span {
+      animation: scrollText 3s linear infinite forwards;
     }
   }
 }
 
-main > * {
-  margin-bottom: 80px;
+@keyframes scrollText {
+  0% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
 }
